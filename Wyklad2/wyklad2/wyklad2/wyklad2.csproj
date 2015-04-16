@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Armor.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="types\Thief.cs" />
-    <Compile Include="types\Warrior.cs" />
-    <Compile Include="types\Wizard.cs" />
+    <Compile Include="playerClasses\Thief.cs" />
+    <Compile Include="playerClasses\Warrior.cs" />
+    <Compile Include="playerClasses\Wizard.cs" />
+    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

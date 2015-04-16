@@ -11,12 +11,13 @@ namespace wyklad2
     {
         static void Main(string[] args)
         {
-            Thief player = new Thief();
+            Thief player = new Thief("Janusz");
             Enemy enemy = new Enemy();
-            player.attack(enemy);
-            System.Console.WriteLine(enemy.health);
-            player.name = System.Console.ReadLine();
-            System.Console.WriteLine(player.name);
+            Weapon bron = new Weapon(12, 5);
+
+            player.EquipWeapon(bron);
+            player.Attack(enemy);
+            enemy.Attack(player);
         }
     }
 }
