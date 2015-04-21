@@ -8,18 +8,18 @@ namespace wyklad2
 {
     abstract class Player
     {
-        protected int health;
-        protected int baseArmor;
-        protected int baseDamage;
+        public int health;
+        public int baseArmor;
+        public int baseDamage;
         public string name { get; set; }
-        protected Weapon equippedWeapon;
+        public Weapon equippedWeapon;
 
-        public void Attack(Enemy enemy)
+        public void attack(Enemy enemy)
         {
-            enemy.Defend(baseDamage+equippedWeapon.damage);
+            enemy.defend(baseDamage+equippedWeapon.damage);
         }
 
-        public void Defend(int damageOutput)
+        public void defend(int damageOutput)
         {
             this.health -= (damageOutput - -baseArmor);
         }
@@ -28,7 +28,7 @@ namespace wyklad2
 
         public Action action;
 
-        public void EquipWeapon(Weapon weapon)
+        public void equipWeapon(Weapon weapon)
         {
            equippedWeapon = weapon;
         }
@@ -36,7 +36,7 @@ namespace wyklad2
         {
             enemy.health -= (damageCount() - enemy.armor);
             Console.WriteLine("Trafiono normalnie");
-            enemy.attackBack(this);
+            enemy.attack(this);
         }
 
         public void kick(Enemy enemy)
