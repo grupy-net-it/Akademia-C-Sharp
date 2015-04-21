@@ -12,11 +12,22 @@ namespace wyklad2
         static void Main(string[] args)
         {
             Thief player = new Thief();
-            Enemy enemy = new Enemy();
-            player.attack(enemy);
-            System.Console.WriteLine(enemy.health);
-            player.name = System.Console.ReadLine();
-            System.Console.WriteLine(player.name);
+            Enemy mountain = new Enemy();
+
+            // player.action(mountain) += player.punch;
+
+            player.action += player.punch;
+            player.action += player.kick;
+            player.action += player.attack;
+            player.action += player.kick;
+
+            player.action -= player.kick;
+
+            player.action(mountain);
+
+            Console.WriteLine(mountain.health);
+            player.name = Console.ReadLine();
+            Console.WriteLine(player.name);
         }
     }
 }

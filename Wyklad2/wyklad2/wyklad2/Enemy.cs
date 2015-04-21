@@ -11,5 +11,10 @@ namespace wyklad2
         public int health = 100;
         public int armor = 10;
         public int damage = 16;
+
+        public void attackBack(Player player)
+        {
+            player.health -= 10;
+        }
     }
 }
