@@ -19,13 +19,13 @@ namespace wyklad2
         protected int armor;
         protected int damage;
 
-        public void Attack(Player player)
+        public void attack(Player player)
         {
-            player.Defend(damage);
-            player.Attack(this);
+            player.defend(damage);
+            player.attack(this);
         }
 
-        public void Defend(int damageOutput)
+        public void defend(int damageOutput)
         {
             if((damageOutput-armor)>0)
             {

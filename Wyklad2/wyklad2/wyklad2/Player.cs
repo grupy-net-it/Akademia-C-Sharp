@@ -14,25 +14,25 @@ namespace wyklad2
        protected Weapon equippedWeapon;
        public string name { get; set; }
   
-        public void Attack(Enemy enemy)
+        public void attack(Enemy enemy)
         {
-            enemy.Defend(baseDamage + equippedWeapon.damage);
+            enemy.defend(baseDamage + equippedWeapon.damage);
             Console.WriteLine("Trafiono normalnie");
-            enemy.Attack(this);
+            enemy.attack(this);
         }
-        public void Kick(Enemy enemy)
+        public void kick(Enemy enemy)
         {
-            enemy.Defend(5);
+            enemy.defend(5);
             Console.WriteLine("Trafiono z buta w twarz");
         }
 
-        public void Punch(Enemy enemy)
+        public void punch(Enemy enemy)
         {
-            enemy.Defend(10);
+            enemy.defend(10);
             Console.WriteLine("Trafiono pięścią");
         }
 
-        public void Defend(int damageOutput)
+        public void defend(int damageOutput)
         {
             if ((damageOutput - baseArmor) > 0)
             {
@@ -40,7 +40,7 @@ namespace wyklad2
             }
         }
 
-        public void EquipWeapon(Weapon weapon)
+        public void equipWeapon(Weapon weapon)
         {
             equippedWeapon = weapon;
         }
