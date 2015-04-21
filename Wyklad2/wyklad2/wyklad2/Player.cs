@@ -12,21 +12,20 @@ namespace wyklad2
         protected int baseArmor;
         protected int baseDamage;
         public string name { get; set; }
-        protected Weapon equippedWeapon;
+
+        protected List<Item> Equipment;
+
 
         public void Attack(Enemy enemy)
         {
-            enemy.Defend(baseDamage+equippedWeapon.damage);
+            enemy.Defend(baseDamage);
         }
 
         public void Defend(int damageOutput)
         {
-            this.health -= (damageOutput - -baseArmor);
+            this.health -= (damageOutput -baseArmor);
         }
 
-        public void EquipWeapon(Weapon weapon)
-        {
-            equippedWeapon = weapon;
-        }
+
     }
 }

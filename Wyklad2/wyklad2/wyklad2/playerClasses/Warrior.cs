@@ -8,12 +8,11 @@ namespace wyklad2.types
 {
     class Warrior : Player
     {
-        public Warrior(string name)
+        public Warrior()
         {
             this.health = 100;
             this.baseArmor = 20;
             this.rage = 0;
-            this.name = name;
             this.baseDamage = 20;
         }
 

@@ -8,12 +8,11 @@ namespace wyklad2.types
 {
     class Thief : Player
     {
-        public Thief(string name)
+        public Thief()
         {
             this.health = 90;
             this.baseArmor = 15;
             this.energy = 100;
-            this.name = name;
             this.baseDamage = 25;
 
         }
@@ -21,3 +20,8 @@ namespace wyklad2.types
 
     }
 }
+
+
+
+
+
