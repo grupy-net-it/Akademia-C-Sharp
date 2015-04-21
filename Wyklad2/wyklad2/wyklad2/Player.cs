@@ -8,47 +8,44 @@ namespace wyklad2
 {
     abstract class Player
     {
-        public int health;
-        public int baseArmor;
-        public int baseDamage;
-        public string name { get; set; }
-        public Weapon equippedWeapon;
-
-        public void attack(Enemy enemy)
+       protected int health;
+       protected int baseArmor;
+       protected int baseDamage;
+       protected Weapon equippedWeapon;
+       public string name { get; set; }
+  
+        public void Attack(Enemy enemy)
         {
-            enemy.defend(baseDamage+equippedWeapon.damage);
+            enemy.Defend(baseDamage + equippedWeapon.damage);
+            Console.WriteLine("Trafiono normalnie");
+            enemy.Attack(this);
+        }
+        public void Kick(Enemy enemy)
+        {
+            enemy.Defend(5);
+            Console.WriteLine("Trafiono z buta w twarz");
         }
 
-        public void defend(int damageOutput)
+        public void Punch(Enemy enemy)
+        {
+            enemy.Defend(10);
+            Console.WriteLine("Trafiono pięścią");
+        }
+
+        public void Defend(int damageOutput)
         {
             this.health -= (damageOutput - -baseArmor);
         }
 
-        public delegate void Action(Enemy enemy);
+        public void EquipWeapon(Weapon weapon)
+        {
+            equippedWeapon = weapon;
+        }
 
+        public delegate void Action(Enemy enemy);
         public Action action;
 
-        public void equipWeapon(Weapon weapon)
-        {
-           equippedWeapon = weapon;
-        }
-        public void attack(Enemy enemy)
-        {
-            enemy.health -= (damageCount() - enemy.armor);
-            Console.WriteLine("Trafiono normalnie");
-            enemy.attack(this);
-        }
-
-        public void kick(Enemy enemy)
-        {
-            enemy.health -= 5;
-            Console.WriteLine("Trafiono z buta w twarz");
-        }
-
-        public void punch(Enemy enemy)
-        {
-            enemy.health -= 10;
-            Console.WriteLine("Trafiono pięścią");
-        }
+     
+       
     }
 }

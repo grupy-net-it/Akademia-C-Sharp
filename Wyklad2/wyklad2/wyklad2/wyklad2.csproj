@@ -50,6 +50,7 @@
     <Compile Include="playerClasses\Thief.cs" />
     <Compile Include="playerClasses\Warrior.cs" />
     <Compile Include="playerClasses\Wizard.cs" />
+    <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

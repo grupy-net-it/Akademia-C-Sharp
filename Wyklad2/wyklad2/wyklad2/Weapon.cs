@@ -14,6 +14,6 @@ namespace wyklad2
             this.weight = weight;
             this.damage = damage;
         }
-        public int damage;
+        public int damage { get; private set; }
     }
 }

@@ -8,7 +8,7 @@ namespace wyklad2
 {
     class Item
     {
-        protected string name { get; set; }
-        protected int weight { get; set; }
+        public string name { get; protected set; }
+        public int weight { get; protected set; }
     }
 }
