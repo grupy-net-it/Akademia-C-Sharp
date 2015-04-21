@@ -8,24 +8,47 @@ namespace wyklad2
 {
     abstract class Player
     {
-        protected int health;
-        protected int baseArmor;
-        protected int baseDamage;
+        public int health;
+        public int baseArmor;
+        public int baseDamage;
         public string name { get; set; }
+        public Weapon equippedWeapon;
 
-        protected List<Item> Equipment;
-
-
-        public void Attack(Enemy enemy)
+        public void attack(Enemy enemy)
         {
-            enemy.Defend(baseDamage);
+            enemy.defend(baseDamage+equippedWeapon.damage);
         }
 
-        public void Defend(int damageOutput)
+        public void defend(int damageOutput)
         {
-            this.health -= (damageOutput -baseArmor);
+            this.health -= (damageOutput - -baseArmor);
         }
 
+        public delegate void Action(Enemy enemy);
 
+        public Action action;
+
+        public void equipWeapon(Weapon weapon)
+        {
+           equippedWeapon = weapon;
+        }
+        public void attack(Enemy enemy)
+        {
+            enemy.health -= (damageCount() - enemy.armor);
+            Console.WriteLine("Trafiono normalnie");
+            enemy.attack(this);
+        }
+
+        public void kick(Enemy enemy)
+        {
+            enemy.health -= 5;
+            Console.WriteLine("Trafiono z buta w twarz");
+        }
+
+        public void punch(Enemy enemy)
+        {
+            enemy.health -= 10;
+            Console.WriteLine("Trafiono pięścią");
+        }
     }
 }

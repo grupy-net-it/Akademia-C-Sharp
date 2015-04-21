@@ -15,16 +15,16 @@ namespace wyklad2
             this.damage = 40;
         }
 
-        protected int health { get; set; }
-        protected int armor { get; set; }
-        protected int damage { get; set; }
+        public int health { get; public set; }
+        public int armor { get; public set; }
+        public int damage { get; public set; }
 
-        public void Attack(Player player)
+        public void attack(Player player)
         {
-            player.Defend(damage);
+            player.defend(damage);
         }
 
-        public void Defend(int damageOutput)
+        public void defend(int damageOutput)
         {
             this.health -=( damageOutput - armor);
         }
