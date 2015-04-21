@@ -15,8 +15,8 @@ namespace wyklad2
             Enemy enemy = new Enemy();
             Weapon bron = new Weapon(12, 5);
 
-            player.equipWeapon(bron);
-            player.kick(enemy);
+            player.EquipWeapon(bron);
+            player.Kick(enemy);
         }
     }
 }
