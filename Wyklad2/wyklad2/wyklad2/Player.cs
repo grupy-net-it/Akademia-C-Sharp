@@ -8,15 +8,30 @@ namespace wyklad2
 {
     abstract class Player
     {
-        public int health;
+        protected int health;
+        protected int baseArmor;
+        protected int baseDamage;
         public string name { get; set; }
-        //Metody czysto wirtualne w C#
-        protected virtual int damageCount() { return 0; }
+        protected Weapon equippedWeapon;
+
+        public void Attack(Enemy enemy)
+        {
+            enemy.Defend(baseDamage+equippedWeapon.damage);
+        }
+
+        public void Defend(int damageOutput)
+        {
+            this.health -= (damageOutput - -baseArmor);
+        }
 
         public delegate void Action(Enemy enemy);
 
         public Action action;
 
+        public void EquipWeapon(Weapon weapon)
+        {
+           equippedWeapon = weapon;
+        }
         public void attack(Enemy enemy)
         {
             enemy.health -= (damageCount() - enemy.armor);
