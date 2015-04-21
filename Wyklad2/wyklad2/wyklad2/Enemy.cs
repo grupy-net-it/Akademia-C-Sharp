@@ -27,7 +27,10 @@ namespace wyklad2
 
         public void Defend(int damageOutput)
         {
-            this.health -=( damageOutput - armor);
+            if((damageOutput-armor)>0)
+            {
+                this.health -=( damageOutput - armor);
+            }
         }
     }
 }

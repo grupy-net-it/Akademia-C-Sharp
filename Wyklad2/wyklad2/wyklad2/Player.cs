@@ -34,7 +34,10 @@ namespace wyklad2
 
         public void Defend(int damageOutput)
         {
-            this.health -= (damageOutput - -baseArmor);
+            if ((damageOutput - baseArmor) > 0)
+            {
+                this.health -= (damageOutput -baseArmor);
+            }
         }
 
         public void EquipWeapon(Weapon weapon)

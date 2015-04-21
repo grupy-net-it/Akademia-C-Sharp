@@ -16,8 +16,7 @@ namespace wyklad2
             Weapon bron = new Weapon(12, 5);
 
             player.EquipWeapon(bron);
-            player.Attack(enemy);
-            enemy.Attack(player);
+            player.Kick(enemy);
         }
     }
 }
