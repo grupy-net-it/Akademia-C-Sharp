@@ -47,9 +47,9 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="playerClasses\Thief.cs" />
-    <Compile Include="playerClasses\Warrior.cs" />
-    <Compile Include="playerClasses\Wizard.cs" />
+    <Compile Include="PlayerClasses\Thief.cs" />
+    <Compile Include="PlayerClasses\Warrior.cs" />
+    <Compile Include="PlayerClasses\Wizard.cs" />
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>

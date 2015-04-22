@@ -23,13 +23,13 @@ namespace wyklad2
         public void Kick(Enemy enemy)
         {
             enemy.Defend(5);
-            Console.WriteLine("Trafiono z buta w twarz");
+            Console.WriteLine("Kołowrotek");
         }
 
         public void Punch(Enemy enemy)
         {
             enemy.Defend(10);
-            Console.WriteLine("Trafiono pięścią");
+            Console.WriteLine("Luj ogłuszacz");
         }
 
         public void Defend(int damageOutput)

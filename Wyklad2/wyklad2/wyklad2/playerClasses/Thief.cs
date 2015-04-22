@@ -14,8 +14,9 @@ namespace wyklad2.types
             this.baseArmor = 15;
             this.energy = 100;
             this.baseDamage = 25;
-
+        
         }
+
         protected int energy;
 
     }
