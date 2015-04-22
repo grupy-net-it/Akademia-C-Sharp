@@ -22,7 +22,8 @@ namespace wyklad2
         public void Attack(Player player)
         {
             player.Defend(damage);
-            player.Attack(this);
+            //To potem - przy events
+            //player.Attack(this);
         }
 
         public void Defend(int damageOutput)
