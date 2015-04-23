@@ -9,24 +9,34 @@ namespace wyklad2
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
             ////At start
             //HelloWorld helloWorld = new HelloWorld();
 
             //helloWorld.SetSomeValue(5);
-
             Thief player = new Thief();
+            player.name = "Jon Snow";
             Enemy enemy = new Enemy();
             Weapon bron = new Weapon(12, 5);
 
             player.EquipWeapon(bron);
 
-            player.action = player.Attack;
+            player.Death += player_Death;
+
+            player.action += player.Attack;
+            player.action += player.Kick;
 
             player.action(enemy);
 
             Console.ReadKey();
+        }
+
+        static void player_Death(string message)
+        {
+            Console.WriteLine("Gracz nie żyje");
         }
     }
 }

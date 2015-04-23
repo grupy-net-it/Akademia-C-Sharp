@@ -12,7 +12,22 @@ namespace wyklad2
        protected int baseArmor;
        protected int baseDamage;
        protected Weapon equippedWeapon;
-       public string name { get; set; }
+       public string name;
+       public delegate void DeathHandler(string message);
+        // Użycie domyślnego delegata EventHandler
+       //public event EventHandler Death;
+       public event DeathHandler Death;
+
+        public void onDeath()
+        {
+            if (Death != null)
+            {
+                //Użycie domyślnego delegata EventHandler
+                //Death(this,new Args());
+                Death(this.name + " umar");
+            }
+        }
+
   
         public void Attack(Enemy enemy)
         {

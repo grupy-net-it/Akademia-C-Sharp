@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Args.cs" />
     <Compile Include="Armor.cs" />
     <Compile Include="HelloWorld.cs" />
     <Compile Include="Enemy.cs" />
