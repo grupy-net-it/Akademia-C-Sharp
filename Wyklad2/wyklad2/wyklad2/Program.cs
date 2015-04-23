@@ -30,7 +30,7 @@ namespace wyklad2
             player.action += player.Kick;
 
             player.action(enemy);
-
+            player.inventory.Add(bron);
             Console.ReadKey();
         }
 

@@ -12,7 +12,14 @@ namespace wyklad2
        protected int baseArmor;
        protected int baseDamage;
        protected Weapon equippedWeapon;
-       public string name;
+       public List<Item> inventory;
+       public string Name { get; private set; }
+       public string name
+       {
+           get;
+
+           set;
+       }
        public delegate void DeathHandler(string message);
         // Użycie domyślnego delegata EventHandler
        //public event EventHandler Death;
