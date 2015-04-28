@@ -12,7 +12,7 @@ namespace wyklad2
        protected int baseArmor;
        protected int baseDamage;
        protected Weapon equippedWeapon;
-       public List<Item> inventory;
+       public List<Item> inventory = new List<Item>();
        public string Name { get; private set; }
        public string name
        {
