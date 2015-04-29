@@ -1,23 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace wyklad2
+﻿namespace wyklad2
 {
-    class Enemy
+    internal class Enemy
     {
+        protected int health;
+        protected int armor;
+        protected int damage;
+
         public Enemy()
         {
             this.health = 100;
             this.armor = 10;
             this.damage = 40;
         }
-
-        protected int health;
-        protected int armor;
-        protected int damage;
 
         public void Attack(Player player)
         {
@@ -28,9 +22,9 @@ namespace wyklad2
 
         public void Defend(int damageOutput)
         {
-            if((damageOutput-armor)>0)
+            if((damageOutput - armor) > 0)
             {
-                this.health -=( damageOutput - armor);
+                this.health -= (damageOutput - armor);
             }
         }
     }

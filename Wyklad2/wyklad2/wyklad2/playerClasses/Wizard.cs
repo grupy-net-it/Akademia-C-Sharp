@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace wyklad2.types
+﻿namespace wyklad2.types
 {
-    class Wizard : Player
+    internal class Wizard : Player
     {
         public Wizard()
         {
@@ -17,6 +11,5 @@ namespace wyklad2.types
         }
 
         protected int mana;
-
     }
 }

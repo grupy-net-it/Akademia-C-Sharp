@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Grupa.NET
+﻿namespace Grupa.NET
 {
     public class Zwierze
     {
@@ -16,9 +10,10 @@ namespace Grupa.NET
         {
             return "hoah";
         }
+
         public string ToString()
         {
-            return "moje Zwierze nazywa sie"+Name;
+            return "Moje Zwierze nazywa sie " + Name;
         }
     }
 }
