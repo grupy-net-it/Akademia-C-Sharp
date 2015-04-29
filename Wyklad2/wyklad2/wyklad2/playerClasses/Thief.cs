@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace wyklad2.types
+﻿namespace wyklad2.PlayerClasses
 {
-    class Thief : Player
+    internal class Thief : Player
     {
         public Thief()
         {
@@ -14,15 +8,8 @@ namespace wyklad2.types
             this.baseArmor = 15;
             this.energy = 100;
             this.baseDamage = 25;
-        
         }
 
         protected int energy;
-
     }
 }
-
-
-
-
-

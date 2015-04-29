@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace wyklad2
+﻿namespace wyklad2
 {
-    class Armor: Item
+    internal class Armor : Item
     {
-        public Armor(int protection,int weight)
+        public Armor(int protection, int weight)
         {
-            this.name = "Pancerz";
-            this.weight = weight;
-            this.protection = protection;
+            this.Name = "Pancerz";
+            this.Weight = weight;
+            this.Protection = protection;
         }
-        public int protection { get; private set; }
+
+        public int Protection { get; private set; }
     }
 }

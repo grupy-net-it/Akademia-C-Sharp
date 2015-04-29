@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace wyklad2
+﻿namespace wyklad2
 {
-    class HelloWorld
+    internal class HelloWorld
     {
-        int someValue = 7;
+        private int someValue = 7;
 
         public void SetSomeValue(int anotherValue)
         {

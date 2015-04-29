@@ -1,40 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using wyklad2.types;
+using wyklad2.PlayerClasses;
 
 namespace wyklad2
 {
-    class Program
+    internal class Program
     {
-
-
         static void Main(string[] args)
         {
             ////At start
             //HelloWorld helloWorld = new HelloWorld();
-
             //helloWorld.SetSomeValue(5);
+
             Thief player = new Thief();
-            player.name = "Jon Snow";
+            player.Name = "Jon Snow";
+
             Enemy enemy = new Enemy();
-            Weapon bron = new Weapon(12, 5);
+            Weapon weapon = new Weapon(12, 5);
 
-            player.EquipWeapon(bron);
+            player.EquipWeapon(weapon);
 
-            player.Death += player_Death;
+            player.Died += OnPlayerDied;
 
-            player.action += player.Attack;
-            player.action += player.Kick;
+            player.ActionOccurred += player.Attack;
+            player.ActionOccurred += player.Kick;
 
-            player.action(enemy);
-            player.inventory.Add(bron);
+            player.ActionOccurred(enemy);
+            player.Inventory.Add(weapon);
             Console.ReadKey();
         }
 
-        static void player_Death(string message)
+        static void OnPlayerDied(string message)
         {
             Console.WriteLine("Gracz nie żyje");
         }

@@ -1,6 +1,0 @@
-c:\users\konrad-komp\documents\visual studio 2012\Projects\Grupa.NET\Grupa.NET\bin\Debug\Grupa.NET.exe.config
-C:\Users\Konrad-komp\Documents\Visual Studio 2012\Projects\Grupa.NET\Grupa.NET\bin\Debug\Grupa.NET.exe
-C:\Users\Konrad-komp\Documents\Visual Studio 2012\Projects\Grupa.NET\Grupa.NET\bin\Debug\Grupa.NET.pdb
-C:\Users\Konrad-komp\Documents\Visual Studio 2012\Projects\Grupa.NET\Grupa.NET\obj\Debug\Grupa.NET.csprojResolveAssemblyReference.cache
-C:\Users\Konrad-komp\Documents\Visual Studio 2012\Projects\Grupa.NET\Grupa.NET\obj\Debug\Grupa.NET.exe
-C:\Users\Konrad-komp\Documents\Visual Studio 2012\Projects\Grupa.NET\Grupa.NET\obj\Debug\Grupa.NET.pdb

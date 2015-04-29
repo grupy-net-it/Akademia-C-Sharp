@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Grupa.NET
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        internal static void Main(string[] args)
         {
-
-
-
             Console.Out.WriteLine("Hello World");
 
             int i = 1;
@@ -37,7 +30,8 @@ namespace Grupa.NET
             };
             Console.Out.WriteLine(Filemon.DoSomething());
             Console.Out.WriteLine(Filemon.ToString());
-            
+
+            Console.ReadKey();
         }
     }
 }
